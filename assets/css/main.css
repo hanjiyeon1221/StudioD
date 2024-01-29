@@ -1,0 +1,424 @@
+/* index */
+.container {
+    position: relative;
+    z-index: 1001;
+    width: 100%;
+    transition: clip-path 1s cubic-bezier(0, 0.66, 0.91, 0.87);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background: #fff;
+}
+.container.down {
+    /* transition: clip-path 1s cubic-bezier(0, 0.66, 0.91, 0.87); */
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.sc-intro {
+}
+.sc-intro .layout {
+    position: relative;
+    padding-top: 13.3vw;
+}
+
+.sc-intro .tit-box {
+    grid-column: 2/16;
+    /* z-index: 3; */
+}
+.sc-intro .healine {
+    font-family: 'Ivar Text', sans-serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    letter-spacing: -1px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+.sc-intro .healine span {
+    display: block;
+}
+
+.sc-intro .title {
+    position: relative;
+    z-index: 1;
+    font-family: 'PolySans Slim', sans-serif;
+    font-size: 8.8vw;
+    font-weight: 300;
+    letter-spacing: -2.5px;
+    margin-left: -8px;
+}
+.sc-intro .title strong {
+    display: block;
+    overflow: hidden;
+}
+.sc-intro .title span {
+    display: block;
+    height: 9.027vw;
+    line-height: 5.903vw;
+}
+.sc-intro .quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: 'Ivar Text', sans-serif;
+    font-style: italic;
+    line-height: 1.5;
+    margin: 200px 0 200px 80px;
+}
+.sc-intro .quote::after {
+    content: '';
+    display: block;
+    width: 80px;
+    border-bottom: 1px solid rgba(30, 29, 28, 0.2);
+    margin-top: 15px;
+}
+
+.sc-intro .quote span {
+    display: block;
+}
+.linehidden {
+    display: block;
+    overflow: hidden;
+}
+
+.sc-intro .col-right {
+    position: absolute;
+    width: 40vw;
+    top: 20vw;
+    right: 0;
+    /* grid-column: 9/17; */
+    /* margin-top: -45vw; */
+}
+
+.sc-intro .vid-box {
+    position: relative;
+    /* height: 800px; */
+    padding-bottom: 110%;
+    /* 높이값 대신 */
+    cursor: pointer;
+}
+.sc-intro .vid-box video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sc-intro .vid-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: rgba(30, 29, 28, 0.2);
+    z-index: 3;
+}
+.sc-intro .vid-play {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 4;
+    cursor: pointer;
+}
+.sc-intro .vid-play svg {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+    transition: 0.5s;
+}
+.sc-intro .vid-play .label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-size: 0.95rem;
+}
+.sc-intro .vid-play .label span {
+    position: relative;
+    overflow: hidden;
+    line-height: 1.5;
+    transition: 0.5s;
+}
+.sc-intro .vid-play .label span:nth-child(2) {
+    position: absolute;
+    top: 100%;
+}
+.sc-intro .vid-box:hover .vid-play .label span {
+    transform: translateY(-100%);
+}
+.sc-intro .vid-box:hover .vid-play svg {
+    transform: scale(0.95);
+}
+
+.sc-intro .txt-box {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    /* width: 500px; */
+    max-width: 600px;
+    margin-top: 45px;
+}
+.sc-intro .txt-box .desc {
+    font-size: 1.6vw;
+    line-height: 2.22vw;
+}
+/* //sc-intro */
+
+.sc-service {
+    padding-bottom: 11.8vw;
+    --bg: 0;
+}
+.sc-service::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg);
+}
+.sc-service .serv-list {
+    position: relative;
+}
+.sc-service .serv-list:nth-child(1) {
+    grid-column: 7/11;
+    padding-top: 19vw;
+}
+.sc-service .serv-list:nth-child(2) {
+    grid-column: 2/6;
+    margin-bottom: 9.5vw;
+}
+.sc-service .serv-list:nth-child(3) {
+    grid-column: 11/15;
+    grid-row-start: 3;
+}
+
+.sc-service .img-box {
+    width: 80%;
+    max-width: 250px;
+    position: absolute;
+}
+.sc-service .serv-list:nth-child(1) .img-box {
+    left: -24vw;
+    top: 0;
+}
+.sc-service .serv-list:nth-child(2) .img-box {
+    left: 60vw;
+    top: -9vw;
+}
+.sc-service .serv-list:nth-child(3) .img-box {
+    left: -24vw;
+    top: -7vw;
+}
+.sc-service .img-box img {
+}
+
+.sc-service .txt-box {
+}
+.sc-service .num {
+    display: inline-block;
+    margin-bottom: 45px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+.sc-service .headline {
+    font-size: 2.7vw;
+    line-height: 3.33vw;
+}
+.sc-service .headline::after {
+    content: '';
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid rgba(30, 29, 28, 0.2);
+    margin: 15px 0 28px;
+}
+.sc-service .desc {
+    line-height: 1.5;
+    margin-bottom: 28px;
+}
+/* //sc-service */
+
+.sc-project {
+    position: relative;
+    --bg: 0;
+}
+.sc-project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg);
+}
+.sc-project .prj-list {
+}
+
+.sc-project .prj-item {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0% 100%;
+    background-size: 100% 120vh;
+    contain: paint;
+}
+.sc-project .prj-item:nth-child(1) {
+    background-image: url(../images/prj_bg01.webp);
+}
+.sc-project .prj-item:nth-child(2) {
+    background-image: url(../images/prj_bg02.webp);
+}
+.sc-project .prj-item:nth-child(3) {
+    background-image: url(../images/prj_bg03.webp);
+}
+
+.sc-project .content {
+    position: absolute;
+    height: 200vh;
+    left: 0;
+    right: 0;
+    top: -100vh;
+    z-index: 1;
+}
+
+.sc-project .prj-item:nth-child(1) .content {
+    top: 0;
+}
+.sc-project .prj-item:nth-child(2) .content {
+    height: 300vh;
+}
+
+.sc-project .sticky {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+.sc-project .sticky::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(1turn, rgba(0, 0, 0, 0.4) 25%, rgba(0, 0, 0, 0.1) 65%);
+}
+
+.sc-project .txt-box {
+    position: absolute;
+    left: 8vw;
+    width: 42vw;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: #fff;
+}
+.sc-project .cate {
+    display: block;
+    line-height: 1.5;
+}
+.sc-project .headline {
+    font-family: 'PolySans Slim', sans-serif;
+    font-size: 6.6vw;
+    font-weight: 300;
+    letter-spacing: -2px;
+}
+.sc-project .headline.nowrap {
+    white-space: nowrap;
+}
+
+.sc-project .img-box {
+    position: absolute;
+    left: 56vw;
+    height: 30vw;
+    width: 29vw;
+}
+.sc-project .img-box img {
+}
+/* //sc-project */
+
+.sc-allprj {
+    position: relative;
+    background-color: #fff;
+    padding: 13vw 0 10vw;
+}
+.sc-allprj .img-box {
+    grid-column: 3/8;
+}
+.sc-allprj .img-box img {
+}
+
+.sc-allprj .txt-box {
+    grid-column: 9/14;
+    align-self: center;
+}
+.sc-allprj .subtit {
+    font-family: 'Ivar Text', sans-serif;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.sc-allprj .headline {
+    margin: 30px 0 45px;
+    font-family: 'PolySans Slim', sans-serif;
+    font-weight: 300;
+    font-size: 4.4vw;
+    letter-spacing: -0.5px;
+}
+.sc-allprj .headline span {
+    display: block;
+}
+/* //sc-allprj */
+
+.sc-about {
+    padding: 10vw 0 13vw;
+    background-color: #fff;
+}
+
+.sc-about .col-left {
+    grid-column: 3/8;
+}
+.sc-about .col-right {
+    grid-column: 10/15;
+}
+
+.sc-about .headline {
+    font-family: 'PolySans Slim', sans-serif;
+    font-size: 4.4vw;
+    letter-spacing: -0.5px;
+}
+.sc-about .headline span {
+    display: block;
+}
+.sc-about .linehidden span {
+    height: 4.16vw;
+    line-height: 2.77vw;
+    margin-bottom: 0.35vw;
+}
+
+.sc-about .img-box {
+    width: 60%;
+    max-width: 280px;
+}
+.sc-about .img-box img {
+    width: 100%;
+}
+
+.sc-about .txt-box {
+}
+.sc-about .desc {
+    padding: 35px 0 45px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(30, 29, 28, 0.2);
+}
+
+/* //sc-about */

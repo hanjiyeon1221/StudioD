@@ -1,0 +1,23 @@
+@font-face {
+    font-display: swap;
+    font-family: 'PolySans Slim';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../font/PolySans-Slim.e24c915.woff2) format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'NeueHaasGroteskText Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/NHaasGroteskTXPro-55Rg.67dc930.woff2) format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Ivar Text';
+    font-style: italic;
+    font-weight: 400;
+    src: url(../font/IvarText-Italic.79673f6.woff2) format('woff2');
+}
